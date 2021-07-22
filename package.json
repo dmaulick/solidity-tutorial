@@ -9,6 +9,7 @@
     "fmt": "prettier --write './**/*.{sol,js,json,md}'",
     "ganache": "ganache-cli --accounts=15 --deterministic --defaultBalanceEther=1000000 --quiet",
     "test": "truffle test",
+    "unitTest": "mocha",
     "solhint": "solhint 'contracts/**/*.sol'"
   },
   "repository": {
@@ -22,8 +23,7 @@
   "homepage": "https://github.com/CoinbaseStablecoin/solidity-tutorial#readme",
   "dependencies": {
     "ethers": "^5.0.7",
-    "mocha": "^9.0.2",
-    "web3": "^1.4.0"
+    "web3": "^1.3.5"
   },
   "devDependencies": {
     "@openzeppelin/contracts": "^3.1.0",
@@ -38,9 +38,10 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "ganache-cli": "^6.12.2",
+    "mocha": "^8.3.2",
     "prettier": "^2.0.5",
     "prettier-plugin-solidity": "^1.0.0-alpha.54",
-    "solc": "^0.8.6",
+    "solc": "^0.4.17",
     "solhint": "^3.1.0",
     "truffle": "^5.1.35"
   },
