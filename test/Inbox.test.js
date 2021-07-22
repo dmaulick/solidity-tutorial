@@ -14,6 +14,7 @@ const Web3 = require("web3");
 const web3 = new Web3(ganache.provider());
 
 let TEST_ACCOUNT;
+// Javascript representation of the smart contract that exists on Chain:
 let inbox;
 
 beforeEach(async () => {
@@ -22,11 +23,14 @@ beforeEach(async () => {
   const accounts = await web3.eth.getAccounts();
   TEST_ACCOUNT = accounts[0];
 
+  // Use an account to deploy the contract.
   inbox = await new web3.eth.Contract(JSON.parse(interface))
     .deploy({
       data: bytecode,
+      // Defines arguments to Inbox constructor:
       arguments: ["Hi there!"],
     })
+    // Send to ganache blockchain
     .send({ from: TEST_ACCOUNT, gas: "1000000" });
 });
 
