@@ -23,6 +23,7 @@
   "homepage": "https://github.com/CoinbaseStablecoin/solidity-tutorial#readme",
   "dependencies": {
     "ethers": "^5.0.7",
+    "truffle-hdwallet-provider": "0.0.3",
     "web3": "^1.3.5"
   },
   "devDependencies": {
